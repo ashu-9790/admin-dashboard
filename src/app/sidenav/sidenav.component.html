@@ -1,0 +1,34 @@
+<!-- The sidebar component with toggleable collapse feature -->
+ <!-- if collapsed variable is false then no class is applied -->
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''">
+  <!-- Logo container with logo button, text, and close button -->
+  <div class="logo-container">
+      <!-- Logo button that toggles the collapse feature when clicked -->
+      <button class="logo" (click)="toggleCollapse()">A</button>
+      
+      <!-- Logo text that shows only when the sidebar is collapsed -->
+      <div class="logo-text" *ngIf="collapsed">Admin</div>
+      
+      <!-- Close button that shows only when the sidebar is collapsed -->
+      <button class="btnclose" *ngIf="collapsed" (click)="closeSidenav()">
+          <!-- Bootstrap icon for close button -->
+          <i class="bi bi-x"></i>
+      </button>
+  </div>
+  
+  <!-- Navigation menu with links -->
+  <ul class="sidenav-nav">
+      <!-- Loop through navigation data and create a list item for each -->
+      <li class="sidenav-nav-item" *ngFor="let data of navData">
+          <!-- Create a link for each navigation item -->
+          <a class="sidenav-nav-link" [routerLink]="data.RouterLink" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+              
+              <!-- Icon for each navigation item -->
+              <a class="sidenav-link-icon" [class]="data.icon"></a>
+              
+              <!-- Text label for each navigation item that shows only when the sidebar is collapsed -->
+              <span class="sidenav-link-text" *ngIf="collapsed">{{data.label}}</span>
+          </a>
+      </li>
+  </ul>
+</div>

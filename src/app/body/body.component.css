@@ -1,0 +1,22 @@
+/* Styles for the body element */
+*{
+  background-color: #f4f7fa;
+  /* background-color: black; */
+}
+.body {
+  width: calc(100% - 4.9rem);
+    height: 100vh;
+    margin-left: 4.9rem;
+    z-index: 0;
+    position: relative;
+    transition: all 0.5s ease;
+    padding: 10px 4px;
+}
+.body-trimmed{
+  width:calc(100% - 15.5625rem);
+  margin-left: 15.5625rem;
+}
+.body-md-screen{
+    width: calc(100% - 5rem);
+    margin-left: 5rem;
+}

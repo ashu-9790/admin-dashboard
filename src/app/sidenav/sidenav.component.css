@@ -1,0 +1,159 @@
+/* Styles for the side navigation component */
+
+.sidenav {
+  /* Background color and transition effect */
+  background: #16324F;
+  transition: all 0.5s ease;
+  
+  /* Positioning and layout */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 5rem;
+  height: 100vh;
+  
+  /* Text color */
+  color: white;
+  
+  /* Remove padding from ul elements */
+  ul {
+    padding: 0;
+  }
+  
+  /* Styles for the logo container */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    padding: 0.938rem 0.938rem 0;
+    width: 100%;
+    gap: 5px;
+    
+    /* Styles for the logo */
+    .logo {
+      text-align: center;
+      width: 2.8rem;
+      border-radius: 0.313rem;
+      padding: 0.313rem;
+      font-size: 24px;
+      font-weight: 900;
+      cursor: pointer;
+      border: none;
+    }
+    
+    /* Styles for the logo text */
+    .logo-text {
+      margin-left: 1.5rem;
+      font-size: 19px;
+      font: weight 400px;
+      color: #fff;
+    }
+    
+    /* Styles for the close button */
+    .btnclose {
+      margin-left: auto;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: transparent;
+      border: none;
+      font-size: 24px;
+      font-weight: 700;
+      filter: invert(1);
+    }
+    
+    /* Styles for the close icon */
+    .fa-times {
+      color: #fff;
+      font-size: 24px;
+    }
+  }
+}
+
+/* Styles for the collapsed side navigation */
+.sidenav-collapsed {
+  width: 15.5625rem;
+}
+
+/* Styles for the navigation links */
+.sidenav-nav {
+  list-style: none;
+  padding: 0.938rem;
+  margin: 5px 0;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  /* Styles for each navigation item */
+  .sidenav-nav-item {
+    width:100%;
+    margin:5px;
+  }
+  
+  /* Styles for each navigation link */
+  .sidenav-nav-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 3rem;
+    color: #f3f3f3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0px 10px;
+    border-radius: 8px;
+    min-width: 2px;
+    margin-left: 15px;
+    margin-right: 18px;
+    
+    /* Styles for the link icon */
+    .sidenav-link-icon {
+      font-size: 22px;
+      min-width: 2rem;
+      margin:13px;
+      color: #fff;
+    }
+    
+    /* Styles for the link text */
+    .sidenav-link-text {
+      font-size: 1.3rem;
+    font-weight: 400;
+    margin-left: 7px;
+    margin-top: 5px;
+    }
+  }
+}
+
+/* Styles for hover effect on navigation items */
+.sidenav-nav-item:hover{
+  .sidenav-nav-link{
+    background-color: #fff;
+    color:black;
+  }
+  .sidenav-link-icon{
+    filter: invert(1);
+  }
+}
+
+/* Styles for active navigation item */
+.active{
+  background-color:#fff ;
+  .sidenav-link-icon,.sidenav-link-text{
+    color:#000;
+  }
+  .sidenav-link-icon{
+    filter:invert(1);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  /* CSS rules go here */
+  .sidenav-collapsed{
+    width: 11rem;
+  }
+  .sidenav-link-text {
+    font-size: 0.9rem !important;
+    margin-left: -8px !important;
+    margin-top: 7px;
+  }
+}
